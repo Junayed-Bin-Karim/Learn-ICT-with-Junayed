@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রেজিস্টার - Learn ICT with Junayed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Learn ICT with Junayed</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">হোম</a></li>
+                    <li><a href="courses.html">কোর্সসমূহ</a></li>
+                    <li><a href="register.html" class="active">রেজিস্টার</a></li>
+                    <li><a href="login.html">লগইন</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Registration Form Section -->
+    <section class="auth-form">
+        <div class="container">
+            <div class="form-container">
+                <h2>একটি নতুন অ্যাকাউন্ট তৈরি করুন</h2>
+                <p>আপনার শিক্ষার যাত্রা শুরু করতে আজই রেজিস্টার করুন</p>
+                
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="name">পুরো নাম</label>
+                        <input type="text" id="name" name="name" placeholder="আপনার পুরো নাম লিখুন">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">ইমেইল ঠিকানা</label>
+                        <input type="email" id="email" name="email" placeholder="আপনার ইমেইল ঠিকানা লিখুন">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">মোবাইল নম্বর</label>
+                        <input type="tel" id="phone" name="phone" placeholder="আপনার মোবাইল নম্বর লিখুন">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">পাসওয়ার্ড</label>
+                        <input type="password" id="password" name="password" placeholder="একটি শক্তিশালী পাসওয়ার্ড তৈরি করুন">
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">পাসওয়ার্ড নিশ্চিত করুন</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="পাসওয়ার্ডটি আবার লিখুন">
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">আমি <a href="#">সেবার শর্তাবলী</a> এবং <a href="#">গোপনীয়তা নীতি</a> পড়েছি এবং সম্মত</label>
+                        <span class="error-message" id="termsError"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn">রেজিস্টার করুন</button>
+                </form>
+                
+                <div class="auth-footer">
+                    <p>ইতিমধ্যে একটি অ্যাকাউন্ট আছে? <a href="login.html">লগইন করুন</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Learn ICT with Junayed</h3>
+                    <p>ICT শিক্ষাকে সহজ এবং সবার জন্য সহজলভ্য করার লক্ষ্যে আমাদের এই প্রচেষ্টা</p>
+                </div>
+                <div class="footer-links">
+                    <h3>লিংকসমূহ</h3>
+                    <ul>
+                        <li><a href="index.html">হোম</a></li>
+                        <li><a href="courses.html">কোর্সসমূহ</a></li>
+                        <li><a href="register.html">রেজিস্টার</a></li>
+                        <li><a href="login.html">লগইন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <p>ইমেইল: info@learnictwithjunayed.com</p>
+                    <p>ফোন: +8801XXXXXXXXX</p>
+                </div>
+                <div class="footer-social">
+                    <h3>সোশ্যাল মিডিয়া</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Learn ICT with Junayed. সকল স্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

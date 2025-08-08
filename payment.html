@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পেমেন্ট - Learn ICT with Junayed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Learn ICT with Junayed</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">হোম</a></li>
+                    <li><a href="courses.html">কোর্সসমূহ</a></li>
+                    <li><a href="dashboard.html">ড্যাশবোর্ড</a></li>
+                    <li><a href="#" id="logoutBtn">লগআউট</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Payment Section -->
+    <section class="payment">
+        <div class="container">
+            <div class="payment-container">
+                <div class="payment-summary">
+                    <h2>আপনার অর্ডার সমাপ্ত করুন</h2>
+                    <div class="order-details">
+                        <h3>অর্ডার বিবরণ</h3>
+                        <div class="order-item">
+                            <span>SSC ICT কোর্স</span>
+                            <span>৳১,৫০০</span>
+                        </div>
+                        <div class="order-item">
+                            <span>HSC ICT কোর্স</span>
+                            <span>৳২,০০০</span>
+                        </div>
+                        <div class="order-total">
+                            <span>মোট</span>
+                            <span>৳৩,৫০০</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="payment-methods">
+                    <h3>পেমেন্ট মেথড নির্বাচন করুন</h3>
+                    
+                    <div class="payment-tabs">
+                        <button class="tab-btn active" data-tab="bkash">bKash</button>
+                        <button class="tab-btn" data-tab="nagad">Nagad</button>
+                        <button class="tab-btn" data-tab="card">কার্ড/ব্যাংক</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="bkash">
+                        <div class="payment-instructions">
+                            <h4>bKash এর মাধ্যমে পেমেন্ট করুন</h4>
+                            <ol>
+                                <li>bKash মোবাইল অ্যাপে যান বা ডায়াল করুন *247#</li>
+                                <li>"পেমেন্ট" অপশনটি নির্বাচন করুন</li>
+                                <li>মার্চেন্ট bKash নম্বর: <strong>০১৭XXXXXXXX</strong> লিখুন</li>
+                                <li>পরিমাণ: <strong>৳৩,৫০০</strong> লিখুন</li>
+                                <li>রেফারেন্স হিসেবে <strong>ICT2023</strong> লিখুন</li>
+                                <li>আপনার bKash পিন নম্বর দিয়ে পেমেন্ট সম্পন্ন করুন</li>
+                            </ol>
+                        </div>
+                        
+                        <form id="bkashForm">
+                            <div class="form-group">
+                                <label for="bkashNumber">আপনার bKash নম্বর</label>
+                                <input type="text" id="bkashNumber" name="bkashNumber" placeholder="01XXXXXXXXX">
+                                <span class="error-message" id="bkashNumberError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="transactionId">ট্রানজেকশন আইডি</label>
+                                <input type="text" id="transactionId" name="transactionId" placeholder="TRX123456789">
+                                <span class="error-message" id="transactionIdError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="paymentAmount">পেমেন্ট পরিমাণ (৳)</label>
+                                <input type="number" id="paymentAmount" name="paymentAmount" value="3500" readonly>
+                            </div>
+                            
+                            <button type="submit" class="btn">পেমেন্ট সাবমিট করুন</button>
+                        </form>
+                    </div>
+                    
+                    <div class="tab-content" id="nagad">
+                        <div class="payment-instructions">
+                            <h4>Nagad এর মাধ্যমে পেমেন্ট করুন</h4>
+                            <ol>
+                                <li>Nagad মোবাইল অ্যাপে যান বা ডায়াল করুন *167#</li>
+                                <li>"পেমেন্ট" অপশনটি নির্বাচন করুন</li>
+                                <li>মার্চেন্ট Nagad নম্বর: <strong>০১৭XXXXXXXX</strong> লিখুন</li>
+                                <li>পরিমাণ: <strong>৳৩,৫০০</strong> লিখুন</li>
+                                <li>রেফারেন্স হিসেবে <strong>ICT2023</strong> লিখুন</li>
+                                <li>আপনার Nagad পিন নম্বর দিয়ে পেমেন্ট সম্পন্ন করুন</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="card">
+                        <div class="payment-instructions">
+                            <h4>কার্ড/ব্যাংক ট্রান্সফারের মাধ্যমে পেমেন্ট করুন</h4>
+                            <p>আপনি নিচের ব্যাংক ডিটেইলসে টাকা পাঠাতে পারেন:</p>
+                            <ul>
+                                <li>ব্যাংক নাম: ঢাকা ব্যাংক</li>
+                                <li>অ্যাকাউন্ট নাম: Learn ICT with Junayed</li>
+                                <li>অ্যাকাউন্ট নম্বর: 1234567890123</li>
+                                <li>ব্রাঞ্চ: গুলশান ব্রাঞ্চ, ঢাকা</li>
+                                <li>রাউটিং নম্বর: 123456789</li>
+                            </ul>
+                            <p>পেমেন্ট সম্পন্ন হলে রিসিপ্ট/ট্রানজেকশন আইডি আমাদের ইমেইল করুন info@learnictwithjunayed.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Learn ICT with Junayed</h3>
+                    <p>ICT শিক্ষাকে সহজ এবং সবার জন্য সহজলভ্য করার লক্ষ্যে আমাদের এই প্রচেষ্টা</p>
+                </div>
+                <div class="footer-links">
+                    <h3>লিংকসমূহ</h3>
+                    <ul>
+                        <li><a href="index.html">হোম</a></li>
+                        <li><a href="courses.html">কোর্সসমূহ</a></li>
+                        <li><a href="register.html">রেজিস্টার</a></li>
+                        <li><a href="login.html">লগইন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <p>ইমেইল: info@learnictwithjunayed.com</p>
+                    <p>ফোন: +8801XXXXXXXXX</p>
+                </div>
+                <div class="footer-social">
+                    <h3>সোশ্যাল মিডিয়া</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Learn ICT with Junayed. সকল স্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

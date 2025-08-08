@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>যোগাযোগ - Learn ICT with Junayed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Learn ICT with Junayed</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">হোম</a></li>
+                    <li><a href="courses.html">কোর্সসমূহ</a></li>
+                    <li><a href="register.html">রেজিস্টার</a></li>
+                    <li><a href="login.html">লগইন</a></li>
+                    <li><a href="contact.html" class="active">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>আমাদের সাথে যোগাযোগ করুন</h2>
+                    <p>আপনার কোন প্রশ্ন বা মতামত থাকলে আমাদের জানান। আমরা যত দ্রুত সম্ভব আপনার সাথে যোগাযোগ করব।</p>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h3>ইমেইল</h3>
+                            <p>info@learnictwithjunayed.com</p>
+                            <p>support@learnictwithjunayed.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📱</div>
+                        <div class="info-content">
+                            <h3>ফোন</h3>
+                            <p>+8801XXXXXXXXX (সকাল ৯টা - সন্ধ্যা ৬টা)</p>
+                            <p>+8801XXXXXXXXX (হটলাইন)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🏢</div>
+                        <div class="info-content">
+                            <h3>অফিস</h3>
+                            <p>১২৩ লার্নিং সেন্টার, ডিজিটাল রোড</p>
+                            <p>ধানমন্ডি, ঢাকা - ১২০৫</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3>সোশ্যাল মিডিয়ায় অনুসরণ করুন</h3>
+                        <div class="social-icons">
+                            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                            <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                            <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>মেসেজ পাঠান</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">আপনার নাম</label>
+                            <input type="text" id="contactName" name="name" placeholder="আপনার পুরো নাম লিখুন">
+                            <span class="error-message" id="contactNameError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">ইমেইল ঠিকানা</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="আপনার ইমেইল ঠিকানা লিখুন">
+                            <span class="error-message" id="contactEmailError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone">মোবাইল নম্বর (ঐচ্ছিক)</label>
+                            <input type="tel" id="contactPhone" name="phone" placeholder="আপনার মোবাইল নম্বর লিখুন">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject">বিষয়</label>
+                            <select id="contactSubject" name="subject">
+                                <option value="">নির্বাচন করুন</option>
+                                <option value="course">কোর্স সম্পর্কিত প্রশ্ন</option>
+                                <option value="payment">পেমেন্ট সম্পর্কিত সমস্যা</option>
+                                <option value="technical">টেকনিক্যাল সমস্যা</option>
+                                <option value="other">অন্যান্য</option>
+                            </select>
+                            <span class="error-message" id="contactSubjectError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">আপনার মেসেজ</label>
+                            <textarea id="contactMessage" name="message" rows="5" placeholder="আপনার মেসেজ লিখুন..."></textarea>
+                            <span class="error-message" id="contactMessageError"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn">মেসেজ পাঠান</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map">
+        <div class="container">
+            <h2>আমাদের অবস্থান</h2>
+            <div class="map-container">
+                <!-- Google Map Embed -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.837241715854!2d90.4062773154316!3d23.7508689845879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b33cffc3fb%3A0x4a826f475fd312af!2sDhanmondi%2C%20Dhaka%201205!5e0!3m2!1sen!2sbd!4v1624456789014!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Learn ICT with Junayed</h3>
+                    <p>ICT শিক্ষাকে সহজ এবং সবার জন্য সহজলভ্য করার লক্ষ্যে আমাদের এই প্রচেষ্টা</p>
+                </div>
+                <div class="footer-links">
+                    <h3>লিংকসমূহ</h3>
+                    <ul>
+                        <li><a href="index.html">হোম</a></li>
+                        <li><a href="courses.html">কোর্সসমূহ</a></li>
+                        <li><a href="register.html">রেজিস্টার</a></li>
+                        <li><a href="login.html">লগইন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <p>ইমেইল: info@learnictwithjunayed.com</p>
+                    <p>ফোন: +8801XXXXXXXXX</p>
+                </div>
+                <div class="footer-social">
+                    <h3>সোশ্যাল মিডিয়া</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Learn ICT with Junayed. সকল স্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

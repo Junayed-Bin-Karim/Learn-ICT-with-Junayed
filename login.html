@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>লগইন - Learn ICT with Junayed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Learn ICT with Junayed</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">হোম</a></li>
+                    <li><a href="courses.html">কোর্সসমূহ</a></li>
+                    <li><a href="register.html">রেজিস্টার</a></li>
+                    <li><a href="login.html" class="active">লগইন</a></li>
+                    <li><a href="contact.html">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Form Section -->
+    <section class="auth-form">
+        <div class="container">
+            <div class="form-container">
+                <h2>আপনার অ্যাকাউন্টে লগইন করুন</h2>
+                <p>আপনার কোর্স এবং প্রোগ্রেস এক্সেস করতে লগইন করুন</p>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">ইমেইল ঠিকানা</label>
+                        <input type="email" id="loginEmail" name="email" placeholder="আপনার ইমেইল ঠিকানা লিখুন">
+                        <span class="error-message" id="loginEmailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="loginPassword">পাসওয়ার্ড</label>
+                        <input type="password" id="loginPassword" name="password" placeholder="আপনার পাসওয়ার্ড লিখুন">
+                        <span class="error-message" id="loginPasswordError"></span>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">আমাকে মনে রাখুন</label>
+                    </div>
+                    
+                    <button type="submit" class="btn">লগইন করুন</button>
+                    
+                    <div class="forgot-password">
+                        <a href="#">পাসওয়ার্ড ভুলে গেছেন?</a>
+                    </div>
+                </form>
+                
+                <div class="auth-footer">
+                    <p>এখনও একটি অ্যাকাউন্ট নেই? <a href="register.html">একটি নতুন অ্যাকাউন্ট তৈরি করুন</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Learn ICT with Junayed</h3>
+                    <p>ICT শিক্ষাকে সহজ এবং সবার জন্য সহজলভ্য করার লক্ষ্যে আমাদের এই প্রচেষ্টা</p>
+                </div>
+                <div class="footer-links">
+                    <h3>লিংকসমূহ</h3>
+                    <ul>
+                        <li><a href="index.html">হোম</a></li>
+                        <li><a href="courses.html">কোর্সসমূহ</a></li>
+                        <li><a href="register.html">রেজিস্টার</a></li>
+                        <li><a href="login.html">লগইন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <p>ইমেইল: info@learnictwithjunayed.com</p>
+                    <p>ফোন: +8801XXXXXXXXX</p>
+                </div>
+                <div class="footer-social">
+                    <h3>সোশ্যাল মিডিয়া</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Learn ICT with Junayed. সকল স্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

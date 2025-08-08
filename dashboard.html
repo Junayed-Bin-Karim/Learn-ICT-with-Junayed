@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ড্যাশবোর্ড - Learn ICT with Junayed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Learn ICT with Junayed</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">হোম</a></li>
+                    <li><a href="courses.html">কোর্সসমূহ</a></li>
+                    <li><a href="dashboard.html" class="active">ড্যাশবোর্ড</a></li>
+                    <li><a href="#" id="logoutBtn">লগআউট</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>আপনার ড্যাশবোর্ড</h2>
+                <p id="welcomeMessage">স্বাগতম, ব্যবহারকারী!</p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <!-- Enrolled Courses -->
+                <div class="dashboard-card">
+                    <h3>আপনার কোর্সসমূহ</h3>
+                    <div class="enrolled-courses">
+                        <div class="enrolled-course">
+                            <div class="course-info">
+                                <h4>JSC ICT</h4>
+                                <p>প্রোগ্রেস: 25%</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 25%"></div>
+                            </div>
+                            <a href="#" class="btn continue-btn">চালিয়ে যান</a>
+                        </div>
+                        
+                        <div class="enrolled-course">
+                            <div class="course-info">
+                                <h4>SSC ICT</h4>
+                                <p>প্রোগ্রেস: 10%</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 10%"></div>
+                            </div>
+                            <a href="#" class="btn continue-btn">চালিয়ে যান</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Info -->
+                <div class="dashboard-card">
+                    <h3>আপনার প্রোফাইল</h3>
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <span>নাম:</span>
+                            <span id="profileName">জুনায়েদ আহমেদ</span>
+                        </div>
+                        <div class="info-item">
+                            <span>ইমেইল:</span>
+                            <span id="profileEmail">user@example.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span>মোবাইল:</span>
+                            <span id="profilePhone">+8801XXXXXXXXX</span>
+                        </div>
+                        <div class="info-item">
+                            <span>সদস্য পদ:</span>
+                            <span id="profileMembership">স্ট্যান্ডার্ড</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn edit-profile-btn">প্রোফাইল সম্পাদনা</a>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="dashboard-card">
+                    <h3>সাম্প্রতিক কার্যক্রম</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">📚</div>
+                            <div class="activity-content">
+                                <p>আপনি JSC ICT কোর্সের "কম্পিউটার নেটওয়ার্ক" লেসন সম্পন্ন করেছেন</p>
+                                <span class="activity-time">২ ঘণ্টা আগে</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">🎓</div>
+                            <div class="activity-content">
+                                <p>আপনি SSC ICT কোর্সে এনরোল করেছেন</p>
+                                <span class="activity-time">১ দিন আগে</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📝</div>
+                            <div class="activity-content">
+                                <p>আপনি JSC ICT কোর্সের কুইজ সম্পন্ন করেছেন (স্কোর: ৮০%)</p>
+                                <span class="activity-time">৩ দিন আগে</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Learn ICT with Junayed</h3>
+                    <p>ICT শিক্ষাকে সহজ এবং সবার জন্য সহজলভ্য করার লক্ষ্যে আমাদের এই প্রচেষ্টা</p>
+                </div>
+                <div class="footer-links">
+                    <h3>লিংকসমূহ</h3>
+                    <ul>
+                        <li><a href="index.html">হোম</a></li>
+                        <li><a href="courses.html">কোর্সসমূহ</a></li>
+                        <li><a href="register.html">রেজিস্টার</a></li>
+                        <li><a href="login.html">লগইন</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <p>ইমেইল: info@learnictwithjunayed.com</p>
+                    <p>ফোন: +8801XXXXXXXXX</p>
+                </div>
+                <div class="footer-social">
+                    <h3>সোশ্যাল মিডিয়া</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Learn ICT with Junayed. সকল স্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
