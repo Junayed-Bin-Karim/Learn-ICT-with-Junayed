@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>অ্যাডমিন প্যানেল - Learn ICT with Junayed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Admin Header Section -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Learn ICT with Junayed - Admin</h1>
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="#" class="active">ড্যাশবোর্ড</a></li>
+                    <li><a href="#">কোর্স ম্যানেজমেন্ট</a></li>
+                    <li><a href="#">ইউজার ম্যানেজমেন্ট</a></li>
+                    <li><a href="#">পেমেন্ট ভেরিফিকেশন</a></li>
+                    <li><a href="#" id="adminLogoutBtn">লগআউট</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Admin Dashboard Section -->
+    <section class="admin-dashboard">
+        <div class="container">
+            <div class="admin-welcome">
+                <h2>অ্যাডমিন ড্যাশবোর্ড</h2>
+                <p>সিস্টেমের সামগ্রিক অবস্থা এবং পরিসংখ্যান</p>
+            </div>
+            
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-content">
+                        <h3>মোট ব্যবহারকারী</h3>
+                        <p>1,245</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-content">
+                        <h3>সক্রিয় কোর্স</h3>
+                        <p>12</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-content">
+                        <h3>আজকের আয়</h3>
+                        <p>৳25,400</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-content">
+                        <h3>নতুন এনরোলমেন্ট</h3>
+                        <p>34</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="courses">কোর্স ম্যানেজমেন্ট</button>
+                    <button class="tab-btn" data-tab="users">ইউজার ম্যানেজমেন্ট</button>
+                    <button class="tab-btn" data-tab="payments">পেমেন্ট ভেরিফিকেশন</button>
+                </div>
+                
+                <div class="tab-content active" id="courses">
+                    <div class="admin-action-bar">
+                        <h3>কোর্স তালিকা</h3>
+                        <button class="btn" id="addCourseBtn">নতুন কোর্স যোগ করুন</button>
+                    </div>
+                    
+                    <div class="admin-table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>আইডি</th>
+                                    <th>কোর্স নাম</th>
+                                    <th>স্তর</th>
+                                    <th>মূল্য</th>
+                                    <th>স্ট্যাটাস</th>
+                                    <th>এনরোলমেন্ট</th>
+                                    <th>অ্যাকশন</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ICT101</td>
+                                    <td>JSC ICT</td>
+                                    <td>জেএসসি</td>
+                                    <td>৳০</td>
+                                    <td><span class="status active">সক্রিয়</span></td>
+                                    <td>856</td>
+                                    <td>
+                                        <button class="btn-sm edit-btn">এডিট</button>
+                                        <button class="btn-sm delete-btn">ডিলিট</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ICT201</td>
+                                    <td>SSC ICT</td>
+                                    <td>এসএসসি</td>
+                                    <td>৳১,৫০০</td>
+                                    <td><span class="status active">সক্রিয়</span></td>
+                                    <td>342</td>
+                                    <td>
+                                        <button class="btn-sm edit-btn">এডিট</button>
+                                        <button class="btn-sm delete-btn">ডিলিট</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ICT301</td>
+                                    <td>HSC ICT</td>
+                                    <td>এইচএসসি</td>
+                                    <td>৳২,০০০</td>
+                                    <td><span class="status active">সক্রিয়</span></td>
+                                    <td>287</td>
+                                    <td>
+                                        <button class="btn-sm edit-btn">এডিট</button>
+                                        <button class="btn-sm delete-btn">ডিলিট</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ICT401</td>
+                                    <td>বিশ্ববিদ্যালয় ভর্তি প্রস্তুতি</td>
+                                    <td>ভর্তি পরীক্ষা</td>
+                                    <td>৳২,৫০০</td>
+                                    <td><span class="status inactive">নিষ্ক্রিয়</span></td>
+                                    <td>156</td>
+                                    <td>
+                                        <button class="btn-sm edit-btn">এডিট</button>
+                                        <button class="btn-sm delete-btn">ডিলিট</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="users">
+                    <div class="admin-action-bar">
+                        <h3>ব্যবহারকারী তালিকা</h3>
+                        <div class="search-box">
+                            <input type="text" placeholder="ব্যবহারকারী খুঁজুন...">
+                            <button class="btn">খুঁজুন</button>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>আইডি</th>
+                                    <th>নাম</th>
+                                    <th>ইমেইল</th>
+                                    <th>মোবাইল</th>
+                                    <th>এনরোলমেন্ট</th>
+                                    <th>স্ট্যাটাস</th>
+                                    <th>অ্যাকশন</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>USR1001</td>
+                                    <td>আহমেদ রহমান</td>
+                                    <td>ahmed@example.com</td>
+                                    <td>017XXXXXXXX</td>
+                                    <td>3</td>
+                                    <td><span class="status active">সক্রিয়</span></td>
+                                    <td>
+                                        <button class="btn-sm edit-btn">এডিট</button>
+                                        <button class="btn-sm delete-btn">ডিলিট</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>USR1002</td>
+                                    <td>ফাতেমা আক্তার</td>
+                                    <td>fatema@example.com</td>
+                                    <td>019XXXXXXXX</td>
+                                    <td>2</td>
+                                    <td><span class="status active">সক্রিয়</span></td>
+                                    <td>
+                                        <button class="btn-sm edit-btn">এডিট</button>
+                                        <button class="btn-sm delete-btn">ডিলিট</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>USR1003</td>
+                                    <td>করিমুল ইসলাম</td>
+                                    <td>karim@example.com</td>
+                                    <td>018XXXXXXXX</td>
+                                    <td>1</td>
+                                    <td><span class="status inactive">নিষ্ক্রিয়</span></td>
+                                    <td>
+                                        <button class="btn-sm edit-btn">এডিট</button>
+                                        <button class="btn-sm delete-btn">ডিলিট</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>USR1004</td>
+                                    <td>সুমাইয়া খান</td>
+                                    <td>sumaiya@example.com</td>
+                                    <td>016XXXXXXXX</td>
+                                    <td>0</td>
+                                    <td><span class="status pending">পেন্ডিং</span></td>
+                                    <td>
+                                        <button class="btn-sm edit-btn">এডিট</button>
+                                        <button class="btn-sm delete-btn">ডিলিট</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="payments">
+                    <div class="admin-action-bar">
+                        <h3>পেমেন্ট ভেরিফিকেশন</h3>
+                        <div class="filter-options">
+                            <select>
+                                <option>সব পেমেন্ট</option>
+                                <option>ভেরিফাইড</option>
+                                <option>পেন্ডিং</option>
+                                <option>রিজেক্টেড</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>ট্রানজেকশন আইডি</th>
+                                    <th>ব্যবহারকারী</th>
+                                    <th>কোর্স</th>
+                                    <th>পরিমাণ</th>
+                                    <th>পদ্ধতি</th>
+                                    <th>তারিখ</th>
+                                    <th>স্ট্যাটাস</th>
+                                    <th>অ্যাকশন</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TRX20230001</td>
+                                    <td>আহমেদ রহমান</td>
+                                    <td>SSC ICT</td>
+                                    <td>৳১,৫০০</td>
+                                    <td>bKash</td>
+                                    <td>২০২৩-০৬-১৫</td>
+                                    <td><span class="status verified">ভেরিফাইড</span></td>
+                                    <td>
+                                        <button class="btn-sm view-btn">ডিটেইলস</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TRX20230002</td>
+                                    <td>ফাতেমা আক্তার</td>
+                                    <td>HSC ICT</td>
+                                    <td>৳২,০০০</td>
+                                    <td>Nagad</td>
+                                    <td>২০২৩-০৬-১৬</td>
+                                    <td><span class="status pending">পেন্ডিং</span></td>
+                                    <td>
+                                        <button class="btn-sm verify-btn">ভেরিফাই</button>
+                                        <button class="btn-sm reject-btn">রিজেক্ট</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TRX20230003</td>
+                                    <td>করিমুল ইসলাম</td>
+                                    <td>বিশ্ববিদ্যালয় ভর্তি</td>
+                                    <td>৳২,৫০০</td>
+                                    <td>ব্যাংক ট্রান্সফার</td>
+                                    <td>২০২৩-০৬-১৭</td>
+                                    <td><span class="status rejected">রিজেক্টেড</span></td>
+                                    <td>
+                                        <button class="btn-sm view-btn">ডিটেইলস</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TRX20230004</td>
+                                    <td>সুমাইয়া খান</td>
+                                    <td>SSC ICT</td>
+                                    <td>৳১,৫০০</td>
+                                    <td>bKash</td>
+                                    <td>২০২৩-০৬-১৮</td>
+                                    <td><span class="status pending">পেন্ডিং</span></td>
+                                    <td>
+                                        <button class="btn-sm verify-btn">ভেরিফাই</button>
+                                        <button class="btn-sm reject-btn">রিজেক্ট</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Course Modal -->
+    <div class="modal" id="addCourseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>নতুন কোর্স যোগ করুন</h3>
+                <span class="close-btn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="addCourseForm">
+                    <div class="form-group">
+                        <label for="courseTitle">কোর্স শিরোনাম</label>
+                        <input type="text" id="courseTitle" name="courseTitle" placeholder="কোর্সের নাম লিখুন">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="courseLevel">কোর্স স্তর</label>
+                        <select id="courseLevel" name="courseLevel">
+                            <option value="">নির্বাচন করুন</option>
+                            <option value="jsc">জেএসসি</option>
+                            <option value="ssc">এসএসসি</option>
+                            <option value="hsc">এইচএসসি</option>
+                            <option value="university">বিশ্ববিদ্যালয় ভর্তি</option>
+                            <option value="other">অন্যান্য</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="coursePrice">কোর্স মূল্য (৳)</label>
+                        <input type="number" id="coursePrice" name="coursePrice" placeholder="কোর্সের মূল্য লিখুন">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="courseDescription">কোর্স বিবরণ</label>
+                        <textarea id="courseDescription" name="courseDescription" rows="4" placeholder="কোর্স সম্পর্কে বিস্তারিত লিখুন"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="courseImage">কোর্স ইমেজ</label>
+                        <input type="file" id="courseImage" name="courseImage">
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="courseStatus" name="courseStatus" checked>
+                        <label for="courseStatus">কোর্স সক্রিয় করুন</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn cancel-btn">বাতিল করুন</button>
+                        <button type="submit" class="btn">কোর্স সংরক্ষণ করুন</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="admin-footer">
+        <div class="container">
+            <p>&copy; 2023 Learn ICT with Junayed. সকল স্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

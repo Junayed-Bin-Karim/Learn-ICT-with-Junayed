@@ -292,13 +292,14 @@ a:hover {
 }
 
 .course-image {
-    height: 180px;
+    /* height: 180px; এটা রিমুভ করুন */
     overflow: hidden;
+    aspect-ratio: 16/9; /* ইমেজের অনুপাত নির্ধারণ করুন */
 }
 
 .course-image img {
     width: 100%;
-    height: 100%;
+    height: auto; /* হাইট অটো রাখুন */
     object-fit: cover;
     transition: all 0.5s ease;
 }
@@ -1189,5 +1190,239 @@ a:hover {
         flex: 1;
         min-width: 120px;
         text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Study Resources Page Specific Styles */
+
+
+.study-resources {
+    padding: 80px 0;
+}
+
+.page-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.password-section {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.password-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.password-form input {
+    padding: 12px 15px;
+    border: 1px solid #D1D5DB;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.error-message {
+    color: var(--error-color);
+    margin-top: 10px;
+    display: none;
+}
+
+.content-section {
+    display: none;
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #E5E7EB;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: var(--dark-gray);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.chapter-list {
+    margin-bottom: 30px;
+}
+
+.chapter-item {
+    margin-bottom: 20px;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.chapter-header {
+    background-color: #F9FAFB;
+    padding: 15px;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chapter-content {
+    padding: 15px;
+    display: none;
+}
+
+.chapter-item.active .chapter-content {
+    display: block;
+}
+
+.notes-section, 
+.mcq-section, 
+.pyq-section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.notes-list {
+    list-style-type: none;
+}
+
+.notes-list li {
+    margin-bottom: 10px;
+}
+
+.notes-list a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.notes-list a:hover {
+    text-decoration: underline;
+}
+
+.mcq-item, 
+.pyq-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #E5E7EB;
+}
+
+.question {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.options {
+    margin-left: 20px;
+}
+
+.option {
+    margin-bottom: 5px;
+}
+
+.correct-answer {
+    color: var(--success-color);
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.logout-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-accent {
+    background-color: var(--secondary-color);
+}
+
+.btn-accent:hover {
+    background-color: #EA580C;
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        text-align: left;
+        border-bottom: 1px solid #E5E7EB;
+    }
+    
+    .tab-btn.active::after {
+        display: none;
+    }
+    
+    .page-title {
+        font-size: 2rem;
     }
 }

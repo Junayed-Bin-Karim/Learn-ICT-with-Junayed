@@ -427,3 +427,285 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//স্টাডি রিসোর্সেস
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navbar = document.querySelector('.navbar');
+    
+    if (mobileMenu && navbar) {
+        mobileMenu.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navbar.classList.toggle('active');
+        });
+    }
+    
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('.navbar ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            navbar.classList.remove('active');
+        });
+    });
+
+    // Password configuration
+    const CORRECT_PASSWORD = "ICT2025";
+    const passwordInput = document.getElementById('passwordInput');
+    const submitBtn = document.getElementById('submitBtn');
+    const errorMessage = document.getElementById('errorMessage');
+    const contentSection = document.getElementById('contentSection');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    // Tab elements
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    // Study Resources Data
+    const studyData = {
+        jsc: {
+            chapters: [
+                {
+                    title: "অধ্যায় ১: আইসিটি পরিচিতি",
+                    notes: [
+                        "আইসিটির মৌলিক ধারণা",
+                        "কম্পিউটার সিস্টেমের উপাদানসমূহ",
+                        "পিডিএফ ডাউনলোড: <a href='#'>আইসিটি ফান্ডামেন্টালস</a>"
+                    ],
+                    mcqs: [
+                        {
+                            question: "আইসিটি কি শব্দের সংক্ষিপ্ত রূপ?",
+                            options: [
+                                "ইনফরমেশন অ্যান্ড কমিউনিকেশন টেকনোলজি",
+                                "ইন্টারন্যাশনাল কমিউনিকেশন টেকনোলজি",
+                                "ইন্টিগ্রেটেড কম্পিউটার টেকনোলজি",
+                                "ইন্টারনেট অ্যান্ড কম্পিউটার টেকনোলজি"
+                            ],
+                            answer: "ইনফরমেশন অ্যান্ড কমিউনিকেশন টেকনোলজি"
+                        },
+                        {
+                            question: "নিচের কোনটি ইনপুট ডিভাইস নয়?",
+                            options: ["কীবোর্ড", "মাউস", "প্রিন্টার", "স্ক্যানার"],
+                            answer: "প্রিন্টার"
+                        }
+                    ],
+                    pyqs: [
+                        {
+                            question: "কম্পিউটার সিস্টেমের প্রধান উপাদানগুলো কি কি? (জেএসসি ২০২২)",
+                            answer: "প্রধান উপাদানগুলো হলো হার্ডওয়্যার, সফটওয়্যার এবং লাইভওয়্যার (ব্যবহারকারী)।"
+                        }
+                    ]
+                }
+            ]
+        },
+        ssc: {
+            chapters: [
+                {
+                    title: "অধ্যায় ১: প্রোগ্রামিং ধারণা",
+                    notes: [
+                        "অ্যালগরিদম ও ফ্লোচার্ট",
+                        "প্রোগ্রামিং ভাষাসমূহ",
+                        "পিডিএফ ডাউনলোড: <a href='#'>প্রোগ্রামিং বেসিকস</a>"
+                    ],
+                    mcqs: [
+                        {
+                            question: "অ্যালগরিদম ডেভেলপমেন্টের সঠিক ধারা কোনটি?",
+                            options: [
+                                "সমস্যা → অ্যালগরিদম → প্রোগ্রাম",
+                                "প্রোগ্রাম → সমস্যা → অ্যালগরিদম",
+                                "অ্যালগরিদম → প্রোগ্রাম → সমস্যা",
+                                "উপরের কোনটিই নয়"
+                            ],
+                            answer: "সমস্যা → অ্যালগরিদম → প্রোগ্রাম"
+                        }
+                    ],
+                    pyqs: [
+                        {
+                            question: "অ্যালগরিদম কি? তিনটি সংখ্যার মধ্যে বৃহত্তম নির্ণয়ের অ্যালগরিদম লিখ। (এসএসসি ২০২২)",
+                            answer: "অ্যালগরিদম হলো সমস্যা সমাধানের ধাপে ধাপে পদ্ধতি। বৃহত্তম সংখ্যা নির্ণয়ের অ্যালগরিদমে ইনপুট, তুলনা এবং আউটপুট ধাপ থাকবে।"
+                        }
+                    ]
+                }
+            ]
+        },
+        hsc: {
+            chapters: [
+                {
+                    title: "অধ্যায় ১: ডাটাবেস ম্যানেজমেন্ট",
+                    notes: [
+                        "রিলেশনাল ডাটাবেস ধারণা",
+                        "এসকিউএল কমান্ড",
+                        "পিডিএফ ডাউনলোড: <a href='#'>ডাটাবেস ফান্ডামেন্টালস</a>"
+                    ],
+                    mcqs: [
+                        {
+                            question: "কোন এসকিউএল কমান্ড ডাটা পুনরুদ্ধারে ব্যবহৃত হয়?",
+                            options: ["INSERT", "SELECT", "UPDATE", "DELETE"],
+                            answer: "SELECT"
+                        }
+                    ],
+                    pyqs: [
+                        {
+                            question: "ফাইল সিস্টেমের তুলনায় ডিবিএমএস এর সুবিধাগুলো কি? (এইচএসসি ২০২১)",
+                            answer: "ডাটা রিডানডেন্সি কমায়, ডাটা ইন্টিগ্রিটি উন্নত করে, নিরাপত্তা বৃদ্ধি করে এবং একাধিক ব্যবহারকারীর একসাথে অ্যাক্সেস সম্ভব করে।"
+                        }
+                    ]
+                }
+            ]
+        }
+    };
+
+    // Password submission
+    submitBtn.addEventListener('click', checkPassword);
+    passwordInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            checkPassword();
+        }
+    });
+
+    // Tab switching
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+            switchTab(tabId);
+        });
+    });
+
+    // Logout functionality
+    logoutBtn.addEventListener('click', function() {
+        contentSection.style.display = 'none';
+        passwordInput.value = '';
+        errorMessage.style.display = 'none';
+    });
+
+    function checkPassword() {
+        if (passwordInput.value === CORRECT_PASSWORD) {
+            contentSection.style.display = 'block';
+            errorMessage.style.display = 'none';
+            loadContent('jsc'); // Load default tab content
+        } else {
+            errorMessage.style.display = 'block';
+        }
+    }
+
+    function switchTab(tabId) {
+        // Update active tab button
+        tabBtns.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-tab') === tabId) {
+                btn.classList.add('active');
+            }
+        });
+
+        // Update active tab content
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.id === `${tabId}Content`) {
+                content.classList.add('active');
+            }
+        });
+
+        // Load content for the selected tab
+        loadContent(tabId);
+    }
+
+    function loadContent(level) {
+        const contentContainer = document.getElementById(`${level}Content`);
+        contentContainer.innerHTML = ''; // Clear previous content
+
+        if (!studyData[level] || studyData[level].chapters.length === 0) {
+            contentContainer.innerHTML = '<p>এই লেভেলের জন্য এখনও কোন কন্টেন্ট উপলব্ধ নেই।</p>';
+            return;
+        }
+
+        studyData[level].chapters.forEach(chapter => {
+            const chapterItem = document.createElement('div');
+            chapterItem.className = 'chapter-item';
+            chapterItem.innerHTML = `
+                <div class="chapter-header">
+                    <span>${chapter.title}</span>
+                    <span>+</span>
+                </div>
+                <div class="chapter-content">
+                    <div class="notes-section">
+                        <h3 class="section-title">নোটস</h3>
+                        <ul class="notes-list">
+                            ${chapter.notes.map(note => `<li>${note}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="mcq-section">
+                        <h3 class="section-title">এমসিকিউ প্রশ্ন</h3>
+                        ${chapter.mcqs.map((mcq, index) => `
+                            <div class="mcq-item">
+                                <p class="question">${index + 1}. ${mcq.question}</p>
+                                <div class="options">
+                                    ${mcq.options.map(opt => `<div class="option">${opt}</div>`).join('')}
+                                </div>
+                                <p class="correct-answer">সঠিক উত্তর: ${mcq.answer}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <div class="pyq-section">
+                        <h3 class="section-title">পূর্ববর্তী বছরের প্রশ্ন</h3>
+                        ${chapter.pyqs.map((pyq, index) => `
+                            <div class="pyq-item">
+                                <p class="question">${index + 1}. ${pyq.question}</p>
+                                <p class="correct-answer">${pyq.answer}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            contentContainer.appendChild(chapterItem);
+        });
+
+        // Add click event to chapter headers
+        document.querySelectorAll('.chapter-header').forEach(header => {
+            header.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+                // Toggle the + and - sign
+                const icon = this.querySelector('span:last-child');
+                icon.textContent = this.parentElement.classList.contains('active') ? '-' : '+';
+            });
+        });
+    }
+});

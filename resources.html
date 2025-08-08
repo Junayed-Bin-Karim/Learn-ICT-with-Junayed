@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn ICT with Junayed</title>
+    <title>স্টাডি রিসোর্সেস - Learn ICT with Junayed</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/study-resources.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -19,13 +20,11 @@
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html" class="active">হোম</a></li>
+                    <li><a href="index.html">হোম</a></li>
                     <li><a href="courses.html">কোর্সসমূহ</a></li>
-                     <li><a href="resources.html">স্টাডি রিসোর্সেস</a></li>
-
+                    <li><a href="study-resources.html" class="active">স্টাডি রিসোর্সেস</a></li>
                     <li><a href="register.html">রেজিস্টার</a></li>
                     <li><a href="login.html">লগইন</a></li>
-                    <li><a href="contact.html">যোগাযোগ</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu">
@@ -36,44 +35,33 @@
         </div>
     </header>
 
-    <!-- Banner Section -->
-    <section class="banner">
+    <!-- Study Resources Content -->
+    <section class="study-resources">
         <div class="container">
-            <div class="banner-content">
-                <h1>ICT শিখুন সহজভাবে</h1>
-                <p>জেএসসি, এসএসসি, এইচএসসি এবং বিশ্ববিদ্যালয় ভর্তি প্রস্তুতির জন্য সম্পূর্ণ গাইডলাইন</p>
-                <a href="register.html" class="btn">রেজিস্টার করুন</a>
+            <h1 class="page-title">স্টাডি রিসোর্সেস</h1>
+            
+            <div class="password-section">
+                <h2>অ্যাক্সেস কোড দিন</h2>
+                <div class="password-form">
+                    <input type="password" id="passwordInput" placeholder="আপনার অ্যাক্সেস কোড লিখুন">
+                    <button id="submitBtn" class="btn">সাবমিট</button>
+                    <p id="errorMessage" class="error-message">ভুল অ্যাক্সেস কোড। আবার চেষ্টা করুন।</p>
+                </div>
             </div>
-            <div class="banner-image">
-                <img src="images/ict-banner.png" alt="ICT Learning Banner">
-            </div>
-        </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">আমাদের সুবিধাসমূহ</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>সম্পূর্ণ কোর্স</h3>
-                    <p>জেএসসি থেকে বিশ্ববিদ্যালয় ভর্তি পর্যন্ত সকল স্তরের কোর্স</p>
+            <div id="contentSection" class="content-section">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="jsc">জেএসসি</button>
+                    <button class="tab-btn" data-tab="ssc">এসএসসি</button>
+                    <button class="tab-btn" data-tab="hsc">এইচএসসি</button>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎓</div>
-                    <h3>প্রশিক্ষিত শিক্ষক</h3>
-                    <p>অভিজ্ঞ এবং প্রশিক্ষিত শিক্ষক দ্বারা গাইডলাইন</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>প্র্যাকটিক্যাল ক্লাস</h3>
-                    <p>থিওরি এবং প্র্যাকটিক্যাল উভয়ই শেখানো হয়</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>মোবাইল ফ্রেন্ডলি</h3>
-                    <p>যেকোনো ডিভাইস থেকে অ্যাক্সেস করুন</p>
+
+                <div id="jscContent" class="tab-content active"></div>
+                <div id="sscContent" class="tab-content"></div>
+                <div id="hscContent" class="tab-content"></div>
+
+                <div class="logout-section">
+                    <button id="logoutBtn" class="btn btn-accent">লক রিসোর্সেস</button>
                 </div>
             </div>
         </div>
@@ -92,7 +80,7 @@
                     <ul>
                         <li><a href="index.html">হোম</a></li>
                         <li><a href="courses.html">কোর্সসমূহ</a></li>
-                        <li><a href="register.html">রেজিস্টার</a></li>
+                        <li><a href="study-resources.html">স্টাডি রিসোর্সেস</a></li>
                         <li><a href="login.html">লগইন</a></li>
                     </ul>
                 </div>
@@ -118,5 +106,6 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/study-resources.js"></script>
 </body>
 </html>
